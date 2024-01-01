@@ -1,7 +1,4 @@
 require('dotenv').config();
-//const { ObjectId } = require('mongodb');
-//const mongoose = require('mongoose');
-// const { client } = require('./mongodb');
 const MONGODB_URI = process.env.MONGODB_URI;
 const { MongoClient } = require('mongodb');
 

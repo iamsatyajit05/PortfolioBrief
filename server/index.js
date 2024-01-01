@@ -15,7 +15,8 @@ app.get('/gm', (req, res) => {
     res.send('GM!');
 });
 
-app.post('/api/addstocks', async (req, res) => {
+// Save stocks list
+app.post('/api/stocks', async (req, res) => {
     const { stocks, userEmail } = req.body;
 
     try {
@@ -32,7 +33,8 @@ app.post('/api/addstocks', async (req, res) => {
     }
 });
 
-app.post('/api/updatestocks', async (req, res) => {
+// Update stocks list
+app.put('/api/stocks', async (req, res) => {
     const { email } = req.body;
 
     try {
@@ -54,7 +56,8 @@ app.post('/api/updatestocks', async (req, res) => {
     }
 });
 
-app.post('/api/adduser', async (req, res) => {
+// Save user
+app.post('/api/users', async (req, res) => {
     const { email } = req.body;
 
     try {
@@ -71,7 +74,8 @@ app.post('/api/adduser', async (req, res) => {
     }
 });
 
-app.post('/api/savepreference', async (req, res) => {
+// Save preference
+app.post('/api/preference', async (req, res) => {
     try {
         const { recieveNewsText, newsTypeText, email } = req.body;
 
@@ -88,7 +92,8 @@ app.post('/api/savepreference', async (req, res) => {
     }
 });
 
-app.post('/api/usernews', async (req, res) => {
+// All news
+app.get('/api/news', async (req, res) => {
     const { email } = req.body;
 
     try {
@@ -107,7 +112,8 @@ app.post('/api/usernews', async (req, res) => {
     }
 });
 
-app.post('/api/fetchnews', async (req, res) => {
+// News selected by user
+app.get('/api/news/:userId', async (req, res) => {
     try {
         const fetchedNewsData = await fetchedNews();
 

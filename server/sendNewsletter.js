@@ -22,16 +22,16 @@ function structureEmail(data) {
 
                         if (newsItem.href && newsItem.href.includes("https://www.livemint.com")) {
                             sourceContent = (
-                                <span className='text-gray-500 text-sm mt-2'>
+                                `<span className='text-gray-500 text-sm mt-2'>
                                     • LiveMint
-                                </span>
+                                </span>`
                             );
                         }
                         else if (newsItem.href && newsItem.href.includes("https://www.moneycontrol.com")) {
                             sourceContent = (
-                                <span className='text-gray-500 text-sm mt-2'>
+                                `<span className='text-gray-500 text-sm mt-2'>
                                     • MoneyControl
-                                </span>
+                                </span>`
                             );
                         }
 
